@@ -161,7 +161,7 @@ li.bullet-default {
 }
 
 .extension-list li.bullet {
-	font-size: 16px;
+	font-size: 14px;
 }
 
 li.bullet-green {
@@ -203,18 +203,18 @@ li.bullet-blue {
 
 .items-leading p {
 	font-family: 'GothamLightRegular';
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 100;
 	margin: 25px 50px;
 }
 
 .cat-children a {
-	font-size: 16px !important;
+	font-size: 14px !important;
 }
 
 div.readmore {
 	font-family: 'GothamLightRegular';
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .com_content .blog .update-image {
@@ -226,7 +226,7 @@ div.readmore {
 /* Article Pages */
 .com_content .item-page {
 	font-family: 'GothamLightRegular';
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 100;
 }
 
@@ -296,7 +296,7 @@ div.podman-header p, div.TDB-head p, div.YASP-header p {
 
 p.extension-intro {
 	font-family: 'GothamLightRegular';
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 1.2em;
 }
 
@@ -402,7 +402,7 @@ div#column-1 > div.gutter > div.TDB-new, div#column-1 > div.gutter > div.social-
 }
 
 p#siteinfo-legal {
-	font-size: 16px;
+	font-size: 14px;
 }
 
 /* Highlight Plugin */
