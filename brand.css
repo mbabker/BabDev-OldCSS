@@ -387,8 +387,9 @@ div#column-1 > div.gutter > div.TDB-new, div#column-1 > div.gutter > div.social-
 	font-size: 13px;
 }
 
+.TDB-new .TDB-tweet-user a,
 .TDB-new .TDB-tweet-time a {
-	font-size: 100% !important;
+	font-family: 'GothamMediumRegular';
 }
 
 .social-icon {
