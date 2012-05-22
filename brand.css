@@ -388,7 +388,8 @@ div#column-1 > div.gutter > div.TDB-new, div#column-1 > div.gutter > div.social-
 }
 
 .TDB-new .TDB-tweet-user a,
-.TDB-new .TDB-tweet-time a {
+.TDB-new .TDB-tweet-time a,
+.TDB-new .TDB-footer-powered-img a {
 	font-family: 'GothamMediumRegular';
 }
 
@@ -404,6 +405,10 @@ div#column-1 > div.gutter > div.TDB-new, div#column-1 > div.gutter > div.social-
 
 p#siteinfo-legal {
 	font-size: 14px;
+}
+
+p#siteinfo-legal a {
+	font-family: 'GothamMediumRegular';
 }
 
 /* Highlight Plugin */
