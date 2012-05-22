@@ -38,6 +38,7 @@ ul.homepage-list {
 
 ul.homepage-list a, ul.homepage-list a:active, ul.homepage-list a:hover, ul.homepage-list a:visited {
 	font-family: bree;
+	font-size: 18px;
 	font-weight: 500;
 	text-decoration: underline;
 }

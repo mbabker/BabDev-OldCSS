@@ -162,6 +162,7 @@ li.bullet-default {
 
 .extension-list li.bullet {
 	font-size: 14px;
+	padding-top: 3px;
 }
 
 li.bullet-green {
