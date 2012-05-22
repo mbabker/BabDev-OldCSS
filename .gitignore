@@ -1,0 +1,6 @@
+# IDE #
+.buildpath
+.project
+.settings
+.DS_Store
+.idea
