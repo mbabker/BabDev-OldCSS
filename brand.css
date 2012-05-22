@@ -223,6 +223,14 @@ div.readmore {
 	margin: 0 50px;
 }
 
+div.items-more h3 {
+	font-family: 'GothamMediumRegular';
+}
+
+div.items-more a {
+	font-size: 14px;
+}
+
 /* Article Pages */
 .com_content .item-page {
 	font-family: 'GothamLightRegular';
@@ -309,6 +317,7 @@ p.extension-intro {
 
 /* Pagination */
 div.pagination {
+	font-size: 14px;
 	text-align: center;
 }
 
