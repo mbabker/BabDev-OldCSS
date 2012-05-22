@@ -1,0 +1,57 @@
+/* Smart Search */
+
+.com_finder div.finder {
+	font-family: bree;
+	font-size: 14px;
+	font-weight: 100;
+}
+
+.com_finder div.finder h3 {
+	font-size: 20px;
+}
+
+form#finder-search fieldset.word {
+	margin-bottom: 15px;
+}
+
+form#finder-search fieldset.word label {
+	font-weight: normal;
+	float: left;
+	line-height: 30px;
+	width: 175px !important;
+}
+
+form#finder-search fieldset.word input, form#finder-search fieldset.word button {
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+	-moz-box-shadow: rgba(255,255,255, 0.6) 0 0 8px;
+	-webkit-box-shadow: rgba(255,255,255, 0.6) 0 0 8px;
+	box-shadow: rgba(255,255,255, 0.6) 0 0 8px;
+	padding: 6px !important;
+}
+
+form#finder-search fieldset.word button {
+	border: 0 !important;
+	margin-left: 10px;
+}
+
+form#finder-search fieldset.word input:hover, form#finder-search fieldset.word input:focus, form#finder-search fieldset.word button:hover, form#finder-search fieldset.word button:focus {
+	-moz-box-shadow: rgba(255,255,255, 0.85) 0 0 8px;
+	-webkit-box-shadow: rgba(255,255,255, 0.85) 0 0 8px;
+	box-shadow: rgba(255,255,255, 0.85) 0 0 8px;
+}
+
+div.smartsearch-result {
+	background-color: #151522;
+	border-top: 1px solid #21213A;
+	margin-bottom: 15px;
+	padding: 15px;
+}
+
+div.smartsearch-result dd.result-text {
+	font-family: bree;
+	font-size: 14px;
+	font-weight: 100;
+	margin: 25px;
+}
+

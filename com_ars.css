@@ -1,0 +1,156 @@
+/* Akeeba Release System */
+
+.com_ars .componentheading {
+	display: none;
+}
+
+#ars-categories-normal > div.moduletable, #ars-categories-bleedingedge > div.moduletable, .item-38 div#content-main > div > div.moduletable, .item-65 div#content-main > div > div.moduletable, .ars-releases > div.moduletable {
+	background-color: #151522;
+	border-bottom: 1px solid #21213A;
+	margin-bottom: 15px;
+	padding: 15px;
+}
+
+#ars-categories-normal h3.je-header a, #ars-categories-bleedingedge h3.je-header a, .item-38 div#content-main > div > div.moduletable h3.je-header, .item-65 div#content-main > div > div.moduletable h3.je-header, h3.je-header a {
+	font-family: 'GothamLightRegular';
+	text-decoration: none;
+}
+
+.ars-release-properties, .ars-item-properties {
+	background: none;
+	font-family: bree;
+	font-size: 16px;
+	font-weight: 100;
+	margin: 10px 0;
+}
+
+.ars-releases-latest {
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.ars-latest-items-filename {
+	float: left;
+	font-family: bree;
+	font-weight: 100;
+}
+
+.ars-latest-items-downloaded {
+	float: right;
+	font-family: bree;
+	font-weight: 100;
+}
+
+.ars-compat {
+	float: right;
+	padding-left: 5px;
+	text-align: center;
+}
+
+.ars-label {
+	font-family: 'GothamLightRegular';
+}
+
+.ars-latest-items {
+	margin: 8px 0;
+}
+
+.ars-latest-items-title {
+	font-size: 18px;
+	width: 100%;
+}
+
+.ars-category-readon, a.readon {
+	font-family: 'GothamLightRegular';
+	font-size: 16px;
+}
+
+.ars-category-description p {
+	font-family: bree;
+	font-size: 16px;
+	font-weight: 100;
+	margin: 25px;
+}
+
+#ars-categories-normal h2, #ars-categories-bleedingedge h2 {
+	font-family: bree;
+	font-size: 40px;
+	font-weight: 500;
+	margin-bottom: 25px;
+	margin-left: 10px;
+}
+
+#ars-categories-bleedingedge h2 {
+	padding-top: 20px;
+}
+
+#ars-categories-normal .custom, #ars-categories-bleedingedge .custom {
+	font-size: 16px !important;
+	line-height: 25px;
+}
+
+#content-main h3.je-header {
+	font-family: 'GothamMediumRegular';
+	font-size: 24px !important;
+}
+
+.ars-browse-releases div.current {
+	margin-bottom: 10px;
+}
+
+.ars-browse-releases dl.tabs dt, div.current dd {
+	font-family: bree;
+	font-size: 16px;
+	font-weight: 100;
+}
+
+.ars-browse-releases dl.tabs dt.open {
+	background-color: #EAEAEB;
+	color: #10101C;
+}
+
+.ars-browse-releases dl.tabs dt.closed {
+	background-color: #10101C;
+	color: #EAEAEB;
+}
+
+.ars-browse-releases > p, .ars-item-description {
+	font-family: bree;
+	font-size: 16px;
+	font-weight: 100;
+}
+
+div.current dd ul {
+	margin-bottom: 10px;
+}
+
+.ars-devrelease-changelog-minor {
+	color: #CCCCCC;
+}
+
+.ars-devrelease-changelog-added {
+	color: #00FF00;
+	font-weight: 100;
+}
+
+.ars-devrelease-changelog-bugfix {
+	color: #0000FF;
+}
+
+.ars-devrelease-changelog-removed {
+	color: #FF0000;
+}
+
+.ars-devrelease-changelog-important {
+	background: #FFFF00;
+	color: #FF0000;
+	font-weight: bold;
+}
+
+.ars-devrelease-changelog-default {
+	color: #FFFFFF;
+}
+
+.ars-list-release .ars-item-property-environment-icon {
+	vertical-align: top !important;
+}

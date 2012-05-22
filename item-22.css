@@ -1,0 +1,21 @@
+/* About Me */
+
+.item-22 #content-above-1 p {
+	border-bottom: 1px solid #21213A;
+	border-top: 4px double #151526;
+	font-size: 19px;
+	line-height: 26px;
+	margin-bottom: 0;
+	padding-bottom: 20px;
+	padding-top: 15px;
+}
+
+.item-22 .item-page {
+	font-family: bree;
+	font-size: 16px;
+	font-weight: 200;
+	line-height: 20px;
+	margin-top: 95px;
+	padding-left: 19px;
+	padding-right: 40px;
+}
