@@ -12,13 +12,13 @@
 }
 
 #ars-categories-normal h3.je-header a, #ars-categories-bleedingedge h3.je-header a, .item-38 div#content-main > div > div.moduletable h3.je-header, .item-65 div#content-main > div > div.moduletable h3.je-header, h3.je-header a {
-	font-family: 'GothamLightRegular';
+	font-family: bree;
 	text-decoration: none;
 }
 
 .ars-release-properties, .ars-item-properties {
 	background: none;
-	font-family: bree;
+	font-family: 'GothamLightRegular';
 	font-size: 16px;
 	font-weight: 100;
 	margin: 10px 0;
@@ -66,7 +66,7 @@
 }
 
 .ars-category-description p {
-	font-family: bree;
+	font-family: 'GothamLightRegular';
 	font-size: 16px;
 	font-weight: 100;
 	margin: 25px;
@@ -90,7 +90,7 @@
 }
 
 #content-main h3.je-header {
-	font-family: 'GothamMediumRegular';
+	font-family: bree;
 	font-size: 24px !important;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .ars-browse-releases dl.tabs dt, div.current dd {
-	font-family: bree;
+	font-family: 'GothamLightRegular';
 	font-size: 16px;
 	font-weight: 100;
 }
@@ -115,7 +115,7 @@
 }
 
 .ars-browse-releases > p, .ars-item-description {
-	font-family: bree;
+	font-family: 'GothamLightRegular';
 	font-size: 16px;
 	font-weight: 100;
 }
