@@ -123,6 +123,7 @@ $errortime = (date("M d Y h:m:s"));
 	if (($siteWidthType == 'max-width') && $fluidMedia )
 		echo "\n".'  <style type="text/css"> img, object {max-width:100%}</style>';
 ?>
+  <link rel="stylesheet" href="<?php echo $baseUrl.'templates/'.$this->template; ?>/css/bootstrap.min.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="<?php echo $baseUrl;?>modules/mod_tweetdisplayback/media/css/construct-css3.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="<?php echo $baseUrl;?>modules/mod_roknavmenu/themes/fusion/css/fusion.css" type="text/css" />
   <script src="<?php echo $baseUrl;?>media/system/js/core.js" type="text/javascript"></script>

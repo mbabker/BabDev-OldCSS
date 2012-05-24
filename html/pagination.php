@@ -60,7 +60,7 @@ function pagination_list_render($list)
 {
 	// Initialize variables
 	$lang =& JFactory::getLanguage();
-	$html = "<ol class=\"pagination\">";
+	$html = '<ul>';
 
 	$html .= $list['start']['data'];
 	$html .= $list['previous']['data'];
@@ -82,15 +82,14 @@ function pagination_list_render($list)
 	$html .= $list['end']['data'];
 	// $html .= '&#171;';
 
-	$html .= "</ol>";
+	$html .= '</ul>';
 	return $html;
 }
 
 function pagination_item_active(&$item) {
-	return "<li><a href=\"".$item->link."\" title=\"".$item->text."\">".$item->text."</a></li>";
+	return '<li><a href="'.$item->link.'" title="'.$item->text.'">'.$item->text.'</a></li>';
 }
 
 function pagination_item_inactive(&$item) {
-	return "<li>".$item->text."</li>";
+	return '<li class="disabled"><a href="#">'.$item->text.'</a></li>';
 }
-?>

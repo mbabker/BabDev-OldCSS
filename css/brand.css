@@ -324,7 +324,13 @@ p.extension-intro {
 /* Pagination */
 div.pagination {
 	font-size: 14px;
+	padding-bottom: 15px;
 	text-align: center;
+}
+
+div.pagination a:hover,
+div.pagination .active a {
+	color: #10101C;
 }
 
 ul.pagenav {
