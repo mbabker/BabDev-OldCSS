@@ -1,4 +1,4 @@
-/* * Fonts */
+/* Fonts */
 @font-face {
 	font-family: 'GothamLightRegular';
 	src: url('../fonts/gotham-light-webfont.eot');
@@ -15,7 +15,7 @@
 	font-style: normal;
 }
 
-/* * CSS Overrides to Construct Framework for BabDev */
+/* CSS Overrides to Construct Framework for BabDev */
 body {
 	background-color: #10101C;
 	color: #EAEAEB;
@@ -244,6 +244,10 @@ div.items-more a {
 	font-size: 20px;
 }
 
+.com_content .item-page h4 {
+	font-family: bree;
+	font-size: 18px;
+}
 .com_content .item-page .update-image {
 	display: block;
 	float: right;
@@ -354,6 +358,12 @@ span.dropcap {
 
 div.code-block {
 	padding: 5px;
+}
+
+span.faq-q {
+	font-family: bree;
+	font-size: 16px;
+	font-weight: 500;
 }
 
 /* Smart Search Module */
