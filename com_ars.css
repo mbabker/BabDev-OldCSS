@@ -48,7 +48,7 @@
 }
 
 .ars-label {
-	font-family: 'GothamLightRegular';
+	font-family: 'GothamMediumRegular';
 }
 
 .ars-latest-items {
@@ -56,6 +56,7 @@
 }
 
 .ars-latest-items-title {
+	font-family: 'GothamMediumRegular';
 	font-size: 18px;
 	width: 100%;
 }
@@ -114,10 +115,18 @@
 	color: #EAEAEB;
 }
 
+.ars-browse-releases h3 {
+	font-family: bree;
+}
+
 .ars-browse-releases > p, .ars-item-description {
 	font-family: 'GothamLightRegular';
 	font-size: 16px;
 	font-weight: 100;
+}
+
+.ars-browse-releases li {
+	list-style: disc outside none;
 }
 
 div.current dd ul {
@@ -134,7 +143,7 @@ div.current dd ul {
 }
 
 .ars-devrelease-changelog-bugfix {
-	color: #0000FF;
+	color: #00BFFF;
 }
 
 .ars-devrelease-changelog-removed {
