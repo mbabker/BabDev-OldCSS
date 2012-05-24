@@ -54,13 +54,12 @@ $tabs = array();
 	<input type="hidden" name="option" value="<?php echo JRequest::getCmd('option') ?>" />
 	<input type="hidden" name="view" value="<?php echo JRequest::getCmd('view') ?>" />
 	<input type="hidden" name="id" value="<?php echo JRequest::getInt('id',0) ?>" />
+	<div class="pagination">
 
 <?php if ($this->params->get('show_pagination')) : ?>
-	<?php echo $this->pagination->getPagesLinks(); ?><br/>
-	<?php echo JText::_('ARS_RELEASES_PER_PAGE') ?>
-	<?php echo $this->pagination->getLimitBox(); ?>
+	<?php echo $this->pagination->getPagesLinks(); ?>
+	<p><?php echo JText::_('ARS_RELEASES_PER_PAGE') ?>
+	<?php echo $this->pagination->getLimitBox(); ?></p>
 <?php endif; ?>
-<?php if ($this->params->get('show_pagination_results')) : ?>
-	<br/><?php echo $this->pagination->getPagesCounter(); ?>
-<?php endif; ?>
+	</div>
 </form>
