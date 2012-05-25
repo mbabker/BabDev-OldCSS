@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
  * @package  BabDev.PageNav
  * @since    1.0
  */
-class plgContentPagenavigation extends JPlugin
+class PlgContentBdpagenav extends JPlugin
 {
 	/**
 	 * Method to add page navigation buttons to an article
