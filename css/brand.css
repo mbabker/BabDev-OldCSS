@@ -333,16 +333,13 @@ div.pagination .active a {
 	color: #10101C;
 }
 
-ul.pagenav {
-	list-style: none;
+.pager a {
+	background-color: #10101C !important;
 }
 
-li.pagenav-prev {
-	float: left;
-}
-
-li.pagenav-next {
-	float: right;
+.pager a:hover {
+	background-color: #F5F5F5 !important;
+	color: #10101C;
 }
 
 /* Text Classes */
