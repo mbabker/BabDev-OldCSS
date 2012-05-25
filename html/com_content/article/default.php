@@ -172,7 +172,7 @@ endif; ?>
 		</p>
 	<?php endif; ?>
 <?php endif; ?>
-<?php if (!empty($this->item->pagination) AND $this->item->pagination AND $this->item->paginationposition AND $this->item->paginationrelative):
+<?php if (!empty($this->item->pagination)):
 	echo $this->item->pagination;?>
 <?php endif; ?>
 <?php echo $this->item->event->afterDisplayContent; ?>
