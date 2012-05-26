@@ -253,6 +253,8 @@ div.items-more a {
 .com_content .item-page .update-image {
 	display: block;
 	float: right;
+	margin-left: 5px;
+	margin-bottom: 5px;
 }
 
 h2.article-title {
