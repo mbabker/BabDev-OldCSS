@@ -9,6 +9,9 @@
 defined('_JEXEC') or die('Restricted Access');
 
 jimport('joomla.utilities.date');
+
+$this->loadHelper('html');
+
 $released = new JDate($cat->release->created);
 
 // Additons to get all supported versions per release (for when multiple items support different versions)
@@ -41,9 +44,9 @@ $environments = ArsHelperHtml::getEnvironments(json_encode(array_unique($version
 		</span>
 
 		<span class="ars-release-property">
-			<span class="ars-label"><?php echo JText::_('LBL_RELEASES_MATURITY') ?>:</span>
+			<span class="ars-label"><?php echo JText::_('COM_ARS_RELEASES_FIELD_MATURITY') ?>:</span>
 			<span class="ars-value">
-				<?php echo JText::_('LBL_RELEASES_MATURITY_'.  strtoupper($cat->release->maturity)) ?>
+				<?php echo JText::_('COM_ARS_RELEASES_MATURITY_'.  strtoupper($cat->release->maturity)) ?>
 			</span>
 		</span>
 
