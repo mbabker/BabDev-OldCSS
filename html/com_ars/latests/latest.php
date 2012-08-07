@@ -8,14 +8,16 @@
 
 defined('_JEXEC') or die('Restricted Access');
 
-$Itemid = JRequest::getInt('Itemid',0);
-?>
-<?php if ($this->params->get('show_page_title', 1)) : ?>
-	<div class="componentheading<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>"><?php echo $this->escape($this->params->get('page_title')); ?></div>
-<?else:?>
-	<div class="componentheading<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>"><?php echo JText::_('ARS_VIEW_LATEST_TITLE'); ?></div>
-<?php endif; ?>
+$this->loadHelper('chameleon');
+$this->loadHelper('router');
 
+$Itemid = FOFInput::getInt('Itemid', 0, $this->input);
+?>
+<?php if($this->cparams->get('show_page_heading', 1)): ?>
+    <div class="componentheading<?php echo $this->escape($this->cparams->get('pageclass_sfx')); ?>"><?php echo $this->escape($this->cparams->get('page_title')); ?></div>
+<?php elseif(!$this->cparams->get('show_page_heading', 1)): ?>
+    <div class="componentheading<?php echo $this->escape($this->cparams->get('pageclass_sfx')); ?>"><?php echo JText::_('ARS_VIEW_LATEST_TITLE'); ?></div>
+<?php endif; ?>
 
 <?php if( array_key_exists('all', $this->items) ): ?>
 <div id="ars-categories-all">
@@ -27,7 +29,7 @@ $Itemid = JRequest::getInt('Itemid',0);
 				{
 					$params = ArsHelperChameleon::getParams('category');
 					@ob_start();
-					@include $this->getSubLayout('category');
+					echo $this->loadAnyTemplate('site:com_ars/latests/category', array('Itemid' => $Itemid, 'cat' => $cat, 'id' => $id));
 					$contents = ob_get_clean();
 					$module = ArsHelperChameleon::getModule($cat->title, $contents, $params);
 					echo JModuleHelper::renderModule($module, $params);
@@ -53,7 +55,7 @@ $Itemid = JRequest::getInt('Itemid',0);
 				{
 					$params = ArsHelperChameleon::getParams('category');
 					@ob_start();
-					@include $this->getSubLayout('category');
+					echo $this->loadAnyTemplate('site:com_ars/latests/category', array('Itemid' => $Itemid, 'cat' => $cat, 'id' => $id));
 					$contents = ob_get_clean();
 					$module = ArsHelperChameleon::getModule($cat->title, $contents, $params);
 					echo JModuleHelper::renderModule($module, $params);
@@ -78,7 +80,7 @@ $Itemid = JRequest::getInt('Itemid',0);
 				{
 					$params = ArsHelperChameleon::getParams('category');
 					@ob_start();
-					@include $this->getSubLayout('category');
+					echo $this->loadAnyTemplate('site:com_ars/latests/category', array('Itemid' => $Itemid, 'cat' => $cat, 'id' => $id));
 					$contents = ob_get_clean();
 					$module = ArsHelperChameleon::getModule($cat->title, $contents, $params);
 					echo JModuleHelper::renderModule($module, $params);

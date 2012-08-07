@@ -15,9 +15,12 @@ $this->item->hit();
 $released = new JDate($this->item->created);
 $tabs = array();
 
+$base_folder = rtrim(JURI::base(), '/');
+if(substr($base_folder, -13) == 'administrator') $base_folder = rtrim(substr($base_folder, 0, -13), '/');
+
 ?>
-<?php if ($this->params->get('show_page_title', 1)) : ?>
-	<div class="componentheading<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>"><?php echo $this->escape($this->params->get('page_title')); ?></div>
+<?php if($this->cparams->get('show_page_heading', 1)): ?>
+    <div class="componentheading<?php echo $this->escape($this->cparams->get('pageclass_sfx')); ?>"><?php echo $this->escape($this->cparams->get('page_title')); ?></div>
 <?php endif; ?>
 
 <div class="ars-list-release">
@@ -26,7 +29,7 @@ $item = $this->item;
 $item->id = 0;
 $params = ArsHelperChameleon::getParams('release');
 @ob_start();
-@include $this->getSubLayout('release','category');
+echo $this->loadAnyTemplate('site:com_ars/category/release', array('item' => $item));
 $contents = ob_get_clean();
 $title = "<img src=\"".JURI::base()."/media/com_ars/icons/status_".$item->maturity.".png\" width=\"16\" height=\"16\" align=\"left\" />".
 	"&nbsp;<span class=\"ars-release-title-version\">".
@@ -51,7 +54,7 @@ echo JModuleHelper::renderModule($module, $params);
 			$title = "<a href=\"$download_url\">".$this->escape($item->title)."</a>";
 			$params = ArsHelperChameleon::getParams('item');
 			@ob_start();
-			@include $this->getSubLayout('item');
+			echo $this->loadAnyTemplate('site:com_ars/release/item', array('item' => $item));
 			$contents = ob_get_clean();
 			$module = ArsHelperChameleon::getModule($title, $contents, $params);
 			echo JModuleHelper::renderModule($module, $params);
@@ -61,27 +64,35 @@ echo JModuleHelper::renderModule($module, $params);
 </div>
 
 <form id="ars-pagination" action="index.php?Itemid=<?php echo JRequest::getInt('Itemid',0) ?>" method="post">
-	<input type="hidden" name="option" value="<?php echo JRequest::getCmd('option') ?>" />
-	<input type="hidden" name="view" value="<?php echo JRequest::getCmd('view') ?>" />
+	<input type="hidden" name="option" value="com_ars" />
+	<input type="hidden" name="view" value="release" />
 	<input type="hidden" name="id" value="<?php echo JRequest::getInt('id',0) ?>" />
 
-<?php if ($this->params->get('show_pagination')) : ?>
-	<?php echo $this->pagination->getPagesLinks(); ?><br/>
-	<?php echo JText::_('ARS_RELEASES_PER_PAGE') ?>
-	<?php echo $this->pagination->getLimitBox(); ?>
-<?php endif; ?>
-<?php if ($this->params->get('show_pagination_results')) : ?>
-	<br/><?php echo $this->pagination->getPagesCounter(); ?>
-<?php endif; ?>
+	<?php if ($this->cparams->get('show_pagination') && ($this->pagination->get('pages.total') > 1)) : ?>
+	    <div class="pagination">
+
+	        <?php if ($this->cparams->get('show_pagination_results')) : ?>
+	        <p class="counter">
+	            <?php echo $this->pagination->getPagesCounter(); ?>
+	        </p>
+	        <?php endif; ?>
+
+	        <?php echo $this->pagination->getPagesLinks(); ?>
+	    </div>
+
+	    <br/>
+	    <?php echo JText::_('ARS_RELEASES_PER_PAGE') ?>
+	    <?php echo $this->pagination->getLimitBox(); ?>
+	<?php endif; ?>
 </form>
 
 
 <script type="text/javascript">
 (function($){
-	$(document).ready(function(){
+    $(document).ready(function(){
 <?php foreach($tabs as $tabid): ?>
-	$("#<?php echo $tabid ?>").tabs();
+    $("#<?php echo $tabid ?>").tabs();
 <?php endforeach; ?>
-	});
+    });
 })(akeeba.jQuery);
 </script>

@@ -9,16 +9,20 @@
 defined('_JEXEC') or die('Restricted Access');
 
 $tabs = array();
+
+$base_folder = rtrim(JURI::base(), '/');
+if(substr($base_folder, -13) == 'administrator') $base_folder = rtrim(substr($base_folder, 0, -13), '/');
+
 ?>
-<?php if ($this->params->get('show_page_title', 1)) : ?>
-	<div class="componentheading<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>"><?php echo $this->escape($this->params->get('page_title')); ?></div>
+<?php if($this->pparams->get('show_page_heading', 1)): ?>
+    <div class="componentheading<?php echo $this->escape($this->pparams->get('pageclass_sfx')); ?>"><?php echo $this->escape($this->pparams->get('page_title')); ?></div>
 <?php endif; ?>
 
 <?php
 	$item = $this->item; $item->id = 0;
 	$params = ArsHelperChameleon::getParams('category');
 	@ob_start();
-	@include $this->getSubLayout('category','browse');
+	echo $this->loadAnyTemplate('site:com_ars/browses/category', array('item' => $item));
 	$contents = ob_get_clean();
 	$module = ArsHelperChameleon::getModule($item->title, $contents, $params);
 	echo JModuleHelper::renderModule($module, $params);
@@ -35,9 +39,9 @@ $tabs = array();
 		{
 			$params = ArsHelperChameleon::getParams('release');
 			@ob_start();
-			@include $this->getSubLayout('release');
+			echo $this->loadAnyTemplate('site:com_ars/category/release', array('item' => $item));
 			$contents = ob_get_clean();
-			$Itemid = JRequest::getInt('Itemid',0);
+			$Itemid = FOFInput::getInt('Itemid', 0, $this->input);
 			$release_url = AKRouter::_('index.php?option=com_ars&view=release&id='.$item->id.'&Itemid='.$Itemid);
 
 			$title = "<img src=\"".JURI::base()."/media/com_ars/icons/status_".$item->maturity.".png\" width=\"16\" height=\"16\" align=\"left\" />".
@@ -51,15 +55,26 @@ $tabs = array();
 </div>
 
 <form id="ars-pagination" action="index.php?Itemid=<?php echo JRequest::getInt('Itemid',0) ?>" method="post">
-	<input type="hidden" name="option" value="<?php echo JRequest::getCmd('option') ?>" />
-	<input type="hidden" name="view" value="<?php echo JRequest::getCmd('view') ?>" />
+	<input type="hidden" name="option" value="com_ars" />
+	<input type="hidden" name="view" value="category" />
 	<input type="hidden" name="id" value="<?php echo JRequest::getInt('id',0) ?>" />
 	<div class="pagination">
 
-<?php if ($this->params->get('show_pagination')) : ?>
-	<?php echo $this->pagination->getPagesLinks(); ?>
-	<p><?php echo JText::_('ARS_RELEASES_PER_PAGE') ?>
-	<?php echo $this->pagination->getLimitBox(); ?></p>
+<?php if ($this->pparams->get('show_pagination') && ($this->pagination->get('pages.total') > 1)) : ?>
+	<div class="pagination">
+
+		<?php if ($this->pparams->get('show_pagination_results')) : ?>
+		<p class="counter">
+			<?php echo $this->pagination->getPagesCounter(); ?>
+		</p>
+		<?php endif; ?>
+
+		<?php echo $this->pagination->getPagesLinks(); ?>
+	</div>
+
+	<br/>
+	<?php echo JText::_('ARS_RELEASES_PER_PAGE') ?>
+	<?php echo $this->pagination->getLimitBox(); ?>
 <?php endif; ?>
 	</div>
 </form>
