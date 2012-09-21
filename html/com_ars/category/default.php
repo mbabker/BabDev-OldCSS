@@ -1,12 +1,11 @@
 <?php
 /**
  * @package AkeebaReleaseSystem
- * @copyright Copyright (c)2010-2011 Nicholas K. Dionysopoulos
+ * @copyright Copyright (c)2010-2012 Nicholas K. Dionysopoulos
  * @license GNU General Public License version 3, or later
- * @version $Id$
  */
 
-defined('_JEXEC') or die('Restricted Access');
+defined('_JEXEC') or die();
 
 $tabs = array();
 
@@ -44,7 +43,7 @@ if(substr($base_folder, -13) == 'administrator') $base_folder = rtrim(substr($ba
 			$Itemid = FOFInput::getInt('Itemid', 0, $this->input);
 			$release_url = AKRouter::_('index.php?option=com_ars&view=release&id='.$item->id.'&Itemid='.$Itemid);
 
-			$title = "<img src=\"".JURI::base()."/media/com_ars/icons/status_".$item->maturity.".png\" width=\"16\" height=\"16\" align=\"left\" />".
+			$title = "<img src=\"".$base_folder."/media/com_ars/icons/status_".$item->maturity.".png\" width=\"16\" height=\"16\" align=\"left\" />".
 				"&nbsp;	<a href=\"".$release_url."\"><span class=\"ars-release-title-version\">".
 				$this->escape($item->version)."</span></a>";
 			$module = ArsHelperChameleon::getModule($title, $contents, $params);
@@ -58,7 +57,6 @@ if(substr($base_folder, -13) == 'administrator') $base_folder = rtrim(substr($ba
 	<input type="hidden" name="option" value="com_ars" />
 	<input type="hidden" name="view" value="category" />
 	<input type="hidden" name="id" value="<?php echo JRequest::getInt('id',0) ?>" />
-	<div class="pagination">
 
 <?php if ($this->pparams->get('show_pagination') && ($this->pagination->get('pages.total') > 1)) : ?>
 	<div class="pagination">
@@ -76,5 +74,4 @@ if(substr($base_folder, -13) == 'administrator') $base_folder = rtrim(substr($ba
 	<?php echo JText::_('ARS_RELEASES_PER_PAGE') ?>
 	<?php echo $this->pagination->getLimitBox(); ?>
 <?php endif; ?>
-	</div>
 </form>
