@@ -13,22 +13,14 @@
 <meta property="fb:admins" content="622795528" />
 <meta name="google-site-verification" content="oS8k0htI5xdvXokavMPnFk4FJkT5uTQHDSY_tSRxzCo" />
 <jdoc:include type="head" />
+	<script type="text/javascript" src="http://use.typekit.com/fhk0vdk.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 
 <body class="offline <?php echo $columnLayout; if($useStickyFooter) echo ' sticky-footer'; echo ' '.$currentComponent; if($articleId) echo ' article-'.$articleId; if ($itemId) echo ' item-'.$itemId; if($catId) echo ' category-'.$catId; if($sectionId) echo ' section-'.$sectionId; ?>">
 <!--[if lt IE 7]> <div style='clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
 	<div id="footer-push">
 		<a id="page-top" name="page-top"></a>
-	<?php if ($headerAboveCount) : ?>
-		<div id="header-above" class="clearfix">
-		<?php if ($this->countModules('header-above-6')) : ?>
-			<div id="header-above-6" class="<?php echo $headerAboveClass ?>">
-				<jdoc:include type="modules" name="header-above-6" style="jexhtml" />
-			</div><!-- end header-above-6 -->
-		<?php endif; ?>
-		</div><!-- end header-above -->
-	<?php endif; ?>
-
 		<div id="header" class="clear clearfix">
 			<div class="gutter clearfix">
 				<h1 id="logo"><a href="<?php echo $this->baseurl ?>/" title="<?php echo $app->getCfg('sitename');?>"><?php echo $app->getCfg('sitename');?></a></h1>
@@ -39,45 +31,22 @@
 			<div id="content-container" class="clear clearfix">
 				<div id="load-first" class="clearfix">
 					<div id="content-main">
-						<div class="gutter">
-							<div id="offline">
-							<?php if ($this->getBuffer('message')) : ?>
-								<jdoc:include type="message" />
-							<?php endif; ?>
-								<div class="leading-0">
-									<h2>Temporarily Unavailable</h2>
-									<p>The main FLBab.com site is temporarily unavailable as the site redesign is completed.  In the meantime, all extension downloads are available below and I may be contacted using one of the methods listed to the right.</p>
-									<div class="item-separator"></div>
-								</div>
-								<?php if ($currentComponent == 'com_ars') : ?>
-								<jdoc:include type="component" />
+						<div>
+							<div class="item-page homepage">
+								<div id="offline">
+								<?php if ($this->getBuffer('message')) : ?>
+									<jdoc:include type="message" />
 								<?php endif; ?>
-							</div><!--end offline-->
-						</div><!--end gutter -->
+									<div class="leading-0">
+										<h2>Temporarily Unavailable</h2>
+										<p>Doing some maintainence, back momentarily!.</p>
+										<div class="item-separator"></div>
+									</div>
+								</div><!--end offline-->
+							</div><!--end gutter -->
+						</div>
 					</div><!-- end content-main -->
-					<?php if ($columnGroupAlphaCount) : ?>
-					<div id="column-group-alpha" class="clearfix">
-						<div class="gutter clearfix">
-							<?php if ($this->countModules('column-1')) : ?>
-							<div id="column-1" class="<?php echo $columnGroupAlphaClass ?>">
-								<jdoc:include type="modules" name="tdb-old" style="jexhtml" />
-							</div><!-- end column-1 -->
-						<?php endif; ?>
-						</div><!--end gutter -->
-					</div><!-- end column-group-alpha -->
-					<?php endif; ?>
 				</div><!-- end load-first -->
-				<?php if ($columnGroupBetaCount) : ?>
-				<div id="column-group-beta" class="clearfix">
-					<div class="gutter clearfix">
-					<?php if ($this->countModules('column-3')) : ?>
-						<div id="column-group-beta-1" class="<?php echo $columnGroupBetaClass ?>">
-							<jdoc:include type="modules" name="offline-contact" style="jexhtml" />
-						</div><!-- end column-3 -->
-					<?php endif; ?>
-					</div><!--end gutter -->
-				</div><!-- end column-group-beta -->
-				<?php endif; ?>
 			</div><!-- end content-container -->
 		</div><!-- end body-container -->
 	</div><!-- end footer-push -->
