@@ -1,0 +1,90 @@
+/**
+ * @version		3.1
+ * @package		DISQUS Comments for Joomla! (package)
+ * @author		JoomlaWorks - http://www.joomlaworks.net
+ * @copyright	Copyright (c) 2006 - 2011 JoomlaWorks Ltd. All rights reserved.
+ * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ */
+
+/* Common */
+a:active,
+a:focus {
+	outline: 0;
+}
+
+span#startOfPage {
+	display: none;
+}
+
+/* ----- LISTING VIEW STYLING ----- */
+/* Disqus comments counter and anchor link */
+a.jwDisqusListingCounterLink,
+a.jwDisqusListingCounterLink:hover {
+	background: url(../../../../../plugins/content/jw_disqus/jw_disqus/tmpl/images/comment_grey.png) no-repeat 0 50%;
+	float: right;
+	font-size: 14px;
+	padding: 0 0 0 20px;
+	margin: 0;
+}
+
+/* ----- ARTICLE VIEW STYLING ----- */
+/* Disqus comments counter and anchor link */
+div.jwDisqusArticleCounter {
+	float: right;
+}
+
+div.jwDisqusArticleCounter span {
+	padding: 4px 8px 4px 20px;
+	margin: 0;
+}
+
+a.jwDisqusArticleCounterLink,
+a.jwDisqusArticleCounterLink:hover {
+	background: transparent url(../../../../../plugins/content/jw_disqus/jw_disqus/tmpl/images/comment_grey.png) no-repeat 0 50%;
+	float: right;
+	padding: 0 0 0 20px;
+	margin: 0;
+}
+
+/* Disqus comments form */
+div.jwDisqusForm {
+	clear: both;
+}
+
+#disqus_thread {
+	padding: 8px;
+	margin: 8px 0;
+	background: #F2F6FC;
+	border-radius: 4px;
+	border: 1px solid #CCC;
+	color: #000000;
+}
+
+#disqus_thread a {
+	color: #000000;
+	font-family: 'GothamLightRegular';
+}
+
+div#jwDisqusFormFooter {
+	padding: 0 8px 8px;
+	text-align: right;
+}
+
+a.dsq-brlink {
+	display: block;
+	float: left;
+	font-size: 9px !important;
+	margin: 0;
+	padding: 0 8px 16px 8px;
+	text-align: center;
+}
+
+a#jwDisqusBackToTop {
+	display: block;
+	float: right;
+	margin: 0;
+	padding: 0;
+	text-decoration: underline;
+}
+
+/* END */
