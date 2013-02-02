@@ -11,5 +11,4 @@ defined('_JEXEC') or die;
 $app      = JFactory::getApplication();
 $sitename = htmlspecialchars($app->getCfg('sitename'));
 ?>
-<p id="siteinfo-legal">All rights reserved. &copy; 2010-<?php echo $cur_year ?> <a href="<?php echo JUri::base(true) ?>" title="<?php echo $sitename ?>"><?php echo $sitename ?></a>.<br />
-Powered by <a href="http://www.joomla.org" title="Joomla!">Joomla!</a></p>
+<p id="siteinfo-legal">All rights reserved. &copy; 2010 - <?php echo $cur_year ?> <a href="<?php echo JUri::base(true) ?>" title="<?php echo $sitename ?>"><?php echo $sitename ?></a>.  Powered by <a href="http://www.joomla.org" title="Joomla!">Joomla!</a></p>
