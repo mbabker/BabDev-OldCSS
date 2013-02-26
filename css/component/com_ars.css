@@ -163,3 +163,9 @@ div.current dd ul {
 .ars-list-release .ars-item-property-environment-icon {
 	vertical-align: top !important;
 }
+
+/* Override link color from Akeeba Strapper */
+div.akeeba-bootstrap a, div.akeeba-bootstrap a:hover, div.akeeba-bootstrap a.active {
+	color: #EAEAEB;
+	text-decoration: underline;
+}
