@@ -330,15 +330,13 @@ div.pagination {
 	text-align: center;
 }
 
-div.pagination a:hover,
-div.pagination .active a {
-	color: #10101C;
-}
-
+div.pagination a,
 .pager a {
 	background-color: #10101C !important;
 }
 
+div.pagination a:hover,
+div.pagination .active a,
 .pager a:hover {
 	background-color: #F5F5F5 !important;
 	color: #10101C;
