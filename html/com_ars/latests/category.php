@@ -72,7 +72,7 @@ $environments = ArsHelperHtml::getEnvironments(json_encode(array_unique($version
 			foreach($cat->release->files as $item)
 			{
 				$i = 1 - $i;
-				echo $this->loadAnyTemplate('site:com_ars/latests/item', array('Itemid' => $Itemid, 'item' => $item));
+				echo $this->loadAnyTemplate('site:com_ars/latests/item', array('Itemid' => $Itemid, 'item' => $item, 'i' => $i));
 			}
 		?>
 		</div>
