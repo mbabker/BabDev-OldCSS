@@ -144,7 +144,7 @@ div.fusion-js-subs, ul.level2 {
 .paypal h4 {
 	color: #4AC8E6;
 	font-family: bree;
-	font-size: 47px;
+	font-size: 47px !important;
 	font-weight: 700;
 }
 
