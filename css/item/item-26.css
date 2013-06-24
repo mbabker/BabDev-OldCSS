@@ -1,7 +1,7 @@
 /* Homepage Specific */
 
 .item-26 #header {
-	background: url("../../images/flbab/homepage_logos.png") no-repeat scroll 0 0 transparent;
+	background: url("../../images/babdev/homepage_logos.png") no-repeat scroll 0 0 transparent;
 	height: 420px;
 }
 
@@ -17,13 +17,13 @@
 .item-26 .homepage p {
 	border-bottom: 1px solid #21213A;
 	line-height: inherit;
-	margin-bottom: 0;
-	padding-left: 19px;
+	margin: 0;
+	padding-left: 29px;
 	padding-bottom: 20px;
 }
 
 div.homepage-hills {
-	background: #242537 url("../../images/flbab/homepage_hills.png") no-repeat scroll 0 0;
+	background: #242537 url("../../images/babdev/homepage_hills.png") no-repeat scroll 0 0;
 	height: 600px;
 	margin-top: -4px;
 }
@@ -32,11 +32,15 @@ ul.homepage-list {
 	font-family: bree;
 	font-weight: 200;
 	list-style: none;
+	margin-top: 0;
 	padding-left: 35px;
 	padding-top: 20px;
 }
 
-ul.homepage-list a, ul.homepage-list a:active, ul.homepage-list a:hover, ul.homepage-list a:visited {
+ul.homepage-list a,
+ul.homepage-list a:active,
+ul.homepage-list a:hover,
+ul.homepage-list a:visited {
 	font-family: bree;
 	font-size: 18px;
 	font-weight: 500;

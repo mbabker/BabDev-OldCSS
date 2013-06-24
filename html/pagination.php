@@ -139,7 +139,9 @@ function pagination_list_render($list)
  */
 function pagination_item_active(&$item)
 {
-	/*// Check for "Start" item
+	$class = '';
+
+	// Check for "Start" item
 	if ($item->text == JText::_('JLIB_HTML_START'))
 	{
 		$display = '<i class="icon-first"></i>';
@@ -161,15 +163,16 @@ function pagination_item_active(&$item)
 	if ($item->text == JText::_('JLIB_HTML_END'))
 	{
 		$display = '<i class="icon-last"></i>';
-	}*/
+	}
 
 	// If the display object isn't set already, just render the item with its text
 	if (!isset($display))
 	{
 		$display = $item->text;
+		$class   = 'hidden-phone';
 	}
 
-	return "<li><a title=\"" . $item->text . "\" href=\"" . $item->link . "\" class=\"pagenav\">" . $display . "</a></li>";
+	return "<li class=\"" . $class . "\"><a title=\"" . $item->text . "\" href=\"" . $item->link . "\" class=\"pagenav\">" . $display . "</a></li>";
 }
 
 /**
@@ -183,7 +186,7 @@ function pagination_item_active(&$item)
  */
 function pagination_item_inactive(&$item)
 {
-	/*// Check for "Start" item
+	// Check for "Start" item
 	if ($item->text == JText::_('JLIB_HTML_START'))
 	{
 		return '<li class="disabled"><a><i class="icon-first"></i></a></li>';
@@ -205,14 +208,14 @@ function pagination_item_inactive(&$item)
 	if ($item->text == JText::_('JLIB_HTML_END'))
 	{
 		return '<li class="disabled"><a><i class="icon-last"></i></a></li>';
-	}*/
+	}
 
 	// Check if the item is the active page
 	if (isset($item->active) && ($item->active))
 	{
-		return '<li class="active"><a>' . $item->text . '</a></li>';
+		return '<li class="active hidden-phone"><a>' . $item->text . '</a></li>';
 	}
 
 	// Doesn't match any other condition, render a normal item
-	return '<li class="disabled"><a>' . $item->text . '</a></li>';
+	return '<li class="disabled hidden-phone"><a>' . $item->text . '</a></li>';
 }

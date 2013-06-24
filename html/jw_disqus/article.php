@@ -17,9 +17,12 @@ defined('_JEXEC') or die('Restricted access');
 <?php if($disqusArticleCounter): ?>
 <!-- DISQUS comments counter and anchor link -->
 <div class="jwDisqusArticleCounter">
-	<span>
-		<a class="jwDisqusArticleCounterLink" href="<?php echo $output->itemURL; ?>#disqus_thread" data-disqus-identifier="<?php echo $output->disqusIdentifier; ?>"><?php echo JText::_("JW_DISQUS_VIEW_COMMENTS"); ?></a>
-	</span>
+	<div class="pull-right">
+		<span class="icon-comments-2"></span>
+		<span>
+			<a class="jwDisqusArticleCounterLink" href="<?php echo $output->itemURL; ?>#disqus_thread" data-disqus-identifier="<?php echo $output->disqusIdentifier; ?>"><?php echo JText::_("JW_DISQUS_VIEW_COMMENTS"); ?></a>
+		</span>
+	</div>
 	<div class="clr"></div>
 </div>
 <?php endif; ?>

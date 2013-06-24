@@ -1,12 +1,11 @@
 <?php
 /**
  * @package AkeebaReleaseSystem
- * @copyright Copyright (c)2010-2011 Nicholas K. Dionysopoulos
+ * @copyright Copyright (c)2010-2013 Nicholas K. Dionysopoulos
  * @license GNU General Public License version 3, or later
- * @version $Id$
  */
 
-defined('_JEXEC') or die('Restricted Access');
+defined('_JEXEC') or die();
 
 $this->loadHelper('chameleon');
 $this->loadHelper('router');
@@ -22,8 +21,11 @@ $Itemid = FOFInput::getInt('Itemid', 0, $this->input);
 <?php if( array_key_exists('all', $this->items) ): ?>
 <div id="ars-categories-all">
 	<?php if(!empty($this->items)): ?>
+	<?php foreach($this->vgroups as $vgroupID => $vgroupTitle): ?>
+	<?php $echoedVgroupTitle = false; ?>
 	<?php
 		foreach($this->items['all'] as $id => $cat):
+			if($cat->vgroup_id != $vgroupID) continue;
 			if( !empty($cat->release) )
 				if( !empty($cat->release->files) )
 				{
@@ -36,6 +38,7 @@ $Itemid = FOFInput::getInt('Itemid', 0, $this->input);
 				}
 		endforeach;
 	?>
+		<?php endforeach; ?>
 	<?php else: ?>
 	<div class="ars-nocategories">
 		<?php echo JText::_('ARS_NO_CATEGORIES'); ?>
@@ -48,12 +51,22 @@ $Itemid = FOFInput::getInt('Itemid', 0, $this->input);
 	<h2><?php echo JText::_('ARS_CATEGORY_NORMAL'); ?></h2>
 
 	<?php if(!empty($this->items['normal'])): ?>
+	<?php foreach($this->vgroups as $vgroupID => $vgroupTitle): ?>
+	<?php $echoedVgroupTitle = false; ?>
 	<?php
 		foreach($this->items['normal'] as $id => $cat):
+			if($cat->vgroup_id != $vgroupID) continue;
+			//echo "<pre>";var_dump($cat);echo "</pre><hr/>";
 			if( !empty($cat->release) )
 				if( !empty($cat->release->files) )
 				{
 					$params = ArsHelperChameleon::getParams('category');
+					if(!$echoedVgroupTitle) {
+						$echoedVgroupTitle = true;
+						if($vgroupTitle):?>
+		<h3><?php echo $vgroupTitle; ?></h3>
+						<?php endif;
+					}
 					@ob_start();
 					echo $this->loadAnyTemplate('site:com_ars/latests/category', array('Itemid' => $Itemid, 'cat' => $cat, 'id' => $id));
 					$contents = ob_get_clean();
@@ -62,6 +75,7 @@ $Itemid = FOFInput::getInt('Itemid', 0, $this->input);
 				}
 		endforeach;
 	?>
+	<?php endforeach; ?>
 	<?php else: ?>
 	<div class="ars-noitems">
 		<?php echo JText::_('ARS_NO_CATEGORIES'); ?>
@@ -73,12 +87,21 @@ $Itemid = FOFInput::getInt('Itemid', 0, $this->input);
 	<h2><?php echo JText::_('ARS_CATEGORY_BLEEDINGEDGE'); ?></h2>
 
 	<?php if(!empty($this->items['bleedingedge'])): ?>
+	<?php foreach($this->vgroups as $vgroupID => $vgroupTitle): ?>
+	<?php $echoedVgroupTitle = false; ?>
 	<?php
 		foreach($this->items['bleedingedge'] as $id => $cat):
+			if($cat->vgroup_id != $vgroupID) continue;
 			if( !empty($cat->release) )
 				if( !empty($cat->release->files) )
 				{
-					$params = ArsHelperChameleon::getParams('category');
+					$params = ArsHelperChameleon::getParams('category', true);
+					if(!$echoedVgroupTitle) {
+						$echoedVgroupTitle = true;
+						if($vgroupTitle):?>
+		<h3><?php echo $vgroupTitle; ?></h3>
+						<?php endif;
+					}
 					@ob_start();
 					echo $this->loadAnyTemplate('site:com_ars/latests/category', array('Itemid' => $Itemid, 'cat' => $cat, 'id' => $id));
 					$contents = ob_get_clean();
@@ -87,6 +110,7 @@ $Itemid = FOFInput::getInt('Itemid', 0, $this->input);
 				}
 		endforeach;
 	?>
+	<?php endforeach; ?>
 	<?php else: ?>
 	<div class="ars-noitems">
 		<?php echo JText::_('ARS_NO_CATEGORIES'); ?>

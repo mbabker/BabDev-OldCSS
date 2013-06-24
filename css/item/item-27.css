@@ -5,7 +5,8 @@
 	width: 200px !important;
 }
 
-form.Chronoform input, form.Chronoform textarea {
+form.Chronoform input,
+form.Chronoform textarea {
 	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
 	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
 	-moz-box-shadow: rgba(255, 255, 255, 0.6) 0 0 8px;
@@ -13,7 +14,10 @@ form.Chronoform input, form.Chronoform textarea {
 	box-shadow: rgba(255, 255, 255, 0.6) 0 0 8px;
 }
 
-form.Chronoform input:hover, form.Chronoform input:focus, form.Chronoform textarea:hover, form.Chronoform textarea:focus {
+form.Chronoform input:hover,
+form.Chronoform input:focus,
+form.Chronoform textarea:hover,
+form.Chronoform textarea:focus {
 	-moz-box-shadow: rgba(255, 255, 255, 0.85) 0 0 8px;
 	-webkit-box-shadow: rgba(255, 255, 255, 0.85) 0 0 8px;
 	box-shadow: rgba(255, 255, 255, 0.85) 0 0 8px;
