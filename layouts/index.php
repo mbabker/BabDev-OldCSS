@@ -19,7 +19,7 @@
 		<meta property="fb:admins" content="622795528" />
 		<meta name="google-site-verification" content="blhM4wCuzQhF9j1Par6WRRSRD2Z4yOnivSsce0zdf34" />
 		<jdoc:include type="head" />
-		<script type="text/javascript" src="http://use.typekit.com/fhk0vdk.js" async="true"></script>
+		<script type="text/javascript" src="http://use.typekit.com/fhk0vdk.js" async></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</head>
 
