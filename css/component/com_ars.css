@@ -1,18 +1,20 @@
 /* Akeeba Release System */
 
-.com_ars .componentheading {
+.com_ars div.page-header h1 {
 	display: none;
 }
 
-#ars-categories-normal > div.module,
-#ars-categories-bleedingedge > div.module,
-.item-38 div#content-main > div > div.module,
-.item-65 div#content-main > div > div.module,
-.ars-releases > div.module {
+div.ars-vgroup- > div.well,
+.ars-releases > div.well {
 	background-color: #151522;
 	border-bottom: 1px solid #21213a;
 	margin-bottom: 15px;
 	padding: 15px;
+}
+
+.ars-releases > div.well span.label {
+	font-size: 22px;
+	line-height: 24px;
 }
 
 #ars-categories-normal h3.je-header a,
@@ -43,7 +45,9 @@ h3.je-header a {
 }
 
 .ars-latest-items-downloaded {
-	float: right;
+	color: #999999;
+	font-size: 16px;
+	font-style: italic;
 	font-family: bree;
 	font-weight: 100;
 }
@@ -80,8 +84,10 @@ h3.je-header a {
 	margin: 25px;
 }
 
-#ars-categories-normal h2,
-#ars-categories-bleedingedge h2 {
+.ars-latest-normal div.page-header h2,
+.ars-latest-bleedingedge div.page-header h2,
+.ars-categories-normal div.page-header h2,
+.ars-categories-bleedingedge div.page-header h2 {
 	font-family: bree;
 	font-size: 40px;
 	font-weight: 500;
@@ -93,13 +99,13 @@ h3.je-header a {
 	padding-top: 20px;
 }
 
-#ars-categories-normal .custom,
-#ars-categories-bleedingedge .custom {
+div.ars-latest-normal div.ars-latest-category,
+div.ars-latest-bleedingedge div.ars-latest-category {
 	font-size: 16px !important;
 	line-height: 25px;
 }
 
-#content-main .akeeba-bootstrap h3 {
+.akeeba-bootstrap h3 {
 	font-size: 24px;
 	font-family: bree;
 	font-weight: normal;
@@ -107,26 +113,17 @@ h3.je-header a {
 }
 
 .akeeba-bootstrap h3 a {
+	font-size: 24px;
+	font-family: bree;
 	text-decoration: none;
 }
 
-.ars-browse-releases div.current {
-	margin-bottom: 10px;
-}
-
-.ars-browse-releases ul.nav-tabs {
+.ars-releases > div.well ul.nav-tabs {
 	padding: 0;
 }
 
-.ars-browse-releases ul.nav-tabs li,
-div.current dd {
-	font-family: 'GothamLightRegular';
+.ars-releases > div.well div.tab-content {
 	font-size: 14px;
-	font-weight: 100;
-}
-
-.ars-browse-releases ul.nav-tabs li.active {
-	color: #10101c;
 }
 
 .ars-browse-releases h3 {

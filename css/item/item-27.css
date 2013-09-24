@@ -30,6 +30,6 @@ form.Chronoform textarea:focus {
 	color: #0055BB;
 }
 
-div.item-page > div.chronoform {
+div.item-page > div > div.chronoform {
 	display: none;
 }
