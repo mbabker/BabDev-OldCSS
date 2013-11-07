@@ -94,9 +94,9 @@ $info    = $params->get('info_block_position', 0);
 						<?php else: ?>
 							<?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', $author); ?>
 						<?php endif; ?>
-						<meta itemprop="author accountablePerson" content="<?php echo $this->item->author;?>" />
 					</dd>
 				<?php endif; ?>
+					<meta itemprop="author accountablePerson" content="<?php echo $this->item->author;?>" />
 				<?php if ($params->get('show_parent_category') && !empty($this->item->parent_slug)) : ?>
 					<dd class="parent-category-name">
 						<?php $title = $this->escape($this->item->parent_title);

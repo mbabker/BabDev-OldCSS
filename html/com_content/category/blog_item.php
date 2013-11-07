@@ -66,6 +66,7 @@ JHtml::_('behavior.framework');
 		<dt class="article-info-term">
 			<?php echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?>
 		</dt>
+		<meta itemprop="author accountablePerson" content="<?php echo $this->item->author;?>" />
 	<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
 		<dd class="createdby">
 			<?php $author = $this->item->author; ?>
@@ -78,7 +79,6 @@ JHtml::_('behavior.framework');
 			<?php else :?>
 			<?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', $author); ?>
 			<?php endif; ?>
-			<meta itemprop="author accountablePerson" content="<?php echo $this->item->author;?>" />
 		</dd>
 	<?php endif; ?>
 
