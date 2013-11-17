@@ -411,5 +411,18 @@
 			ga('create', 'UA-42602973-1', 'babdev.com');
 			ga('send', 'pageview');
 		</script>
+		<script>
+			//<![CDATA[[
+			$SA = {s: 69377, asynch: 1};
+			(function() {
+				var sa = document.createElement("script");
+				sa.type = "text/javascript";
+				sa.async = true;
+				sa.src = ("https:" == document.location.protocol ? "https://" + $SA.s + ".sa" : "http://" + $SA.s + ".a") + ".siteapps.com/" + $SA.s + ".js";
+				var t = document.getElementsByTagName("script")[0];
+				t.parentNode.insertBefore(sa, t);
+			})();
+			//]]>
+		</script>
 	</body>
 </html>
